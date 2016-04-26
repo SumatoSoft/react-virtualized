@@ -12,7 +12,6 @@ import initCellMetadata from '../utils/initCellMetadata'
 import raf from 'raf'
 import shallowCompare from 'react-addons-shallow-compare'
 import updateScrollIndexHelper from './utils/updateScrollIndexHelper'
-
 /**
  * Specifies the number of miliseconds during which to disable pointer events while a scroll is in progress.
  * This improves performance and makes scrolling smoother.
@@ -359,7 +358,8 @@ export default class Grid extends Component {
       renderCell,
       renderCellRanges,
       rowsCount,
-      width
+      width,
+      renderAutofill
     } = this.props
 
     const {
@@ -464,6 +464,7 @@ export default class Grid extends Component {
             {childrenToDisplay}
           </div>
         }
+        {renderAutofill && renderAutofill()}
         {childrenToDisplay.length === 0 &&
           noContentRenderer()
         }

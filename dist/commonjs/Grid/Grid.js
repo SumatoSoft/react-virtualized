@@ -331,6 +331,7 @@ var Grid = function (_Component) {
       var renderCellRanges = _props3.renderCellRanges;
       var rowsCount = _props3.rowsCount;
       var width = _props3.width;
+      var renderAutofill = _props3.renderAutofill;
       var _state2 = this.state;
       var isScrolling = _state2.isScrolling;
       var scrollLeft = _state2.scrollLeft;
@@ -434,6 +435,7 @@ var Grid = function (_Component) {
           },
           childrenToDisplay
         ),
+        renderAutofill && renderAutofill(),
         childrenToDisplay.length === 0 && noContentRenderer()
       );
     }

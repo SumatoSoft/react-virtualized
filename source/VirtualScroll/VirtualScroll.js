@@ -93,7 +93,8 @@ export default class VirtualScroll extends Component {
       rowsCount,
       scrollToIndex,
       scrollTop,
-      width
+      width,
+      renderAutofill
     } = this.props
 
     const classNames = cn('VirtualScroll', className)
@@ -121,6 +122,7 @@ export default class VirtualScroll extends Component {
         scrollToRow={scrollToIndex}
         scrollTop={scrollTop}
         width={width}
+        renderAutofill={renderAutofill}
       />
     )
   }

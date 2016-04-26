@@ -74,6 +74,7 @@ var VirtualScroll = function (_Component) {
       var scrollToIndex = _props.scrollToIndex;
       var scrollTop = _props.scrollTop;
       var width = _props.width;
+      var renderAutofill = _props.renderAutofill;
 
 
       var classNames = (0, _classnames2.default)('VirtualScroll', className);
@@ -114,7 +115,8 @@ var VirtualScroll = function (_Component) {
         rowsCount: rowsCount,
         scrollToRow: scrollToIndex,
         scrollTop: scrollTop,
-        width: width
+        width: width,
+        renderAutofill: renderAutofill
       });
     }
   }, {
